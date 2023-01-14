@@ -11,7 +11,8 @@ const routes: Route[] = [
   },
   {
     path: 'about',
-    component: AboutComponent,
+    loadComponent: () =>
+      import('./about/about.component').then((mod) => mod.AboutComponent),
   },
   {
     path: 'dashboard',
